@@ -73,4 +73,28 @@ class getContent extends cURL{
             echo $e->getMessage();
         }
     }
+    public function raw($query)
+    {
+        $data = '';
+        $xpath = $this->_init();
+
+        $tags = $xpath->query($query);
+        try {
+            foreach($tags as $tag)
+            {
+                $children = $tag->childNodes;
+
+                foreach($children as $child)
+                {
+                    $tmp_doc = new DOMDocument;
+                    $tmp_doc->appendChild($tmp_doc->importNode($child, true));
+                    $data .= $tmp_doc->saveHTML();
+                }
+            }
+            return $data;
+
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 }
