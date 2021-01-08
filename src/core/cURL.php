@@ -40,6 +40,8 @@ class cURL
            if(is_null($this->output))
            {
                 throw new Exception('Domain not found or url is error !');
+           }else{
+               return $this->output;
            }
        } catch (\Exception $e) {
          echo $e->getMessage();
