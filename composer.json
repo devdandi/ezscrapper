@@ -1,0 +1,16 @@
+{
+    "name": "devdandi/ezscrapper",
+    "description": "The simple tools for get content of website using DOMDocument, cURL. This tools is under development but i will update this package everyday. You could getting the content with looking for html tag and automaticaly return the value of array",
+    "type": "library",
+    "require": {
+      "php": ">=7.0.0"
+    },
+    "license": "proprietary",
+    "authors": [
+      {
+        "name": "Dandi Ramdani",
+        "email": "dandiduit@gmail.com"
+      }
+    ],
+    "minimum-stability": "dev"
+  }
